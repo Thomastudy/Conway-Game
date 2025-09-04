@@ -2,14 +2,16 @@ namespace Ucu.Poo.GameOfLife;
 
 public class Tablero
 {
-    public bool[,] Board { get; set; } 
-    public int Height { get; set; }
-    public int Width { get; set; }
+    private bool[,] board; 
+    public int Height { get; private set; }
+    public int Width { get; private set; }
     
-   public Tablero(bool[,] initialBoard)
+    
+    
+   public Tablero(int height, int width)
     {
-        this.Board = initialBoard;
-        this.Width = initialBoard.GetLength(0);
-        this.Height = initialBoard.GetLength(1);
+        this.board = new bool [width, height];
+        this.Width = width;
+        this.Height = height;
     }
 }
