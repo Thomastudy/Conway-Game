@@ -7,17 +7,23 @@ public class Lector
     {
         string content = File.ReadAllText(url);
         string[] contentLines = content.Split('\n');
-        Tablero board = new Tablero[contentLines.Length, contentLines[0].Length];
-        for (int y = 0; y < contentLines.Length; y++)
+
+        int filas = contentLines.Length;
+        int columnas = contentLines[0].Length;
+
+        Tablero board = new Tablero(filas, columnas);
+
+        for (int y = 0; y < filas; y++)
         {
-            for (int x = 0; x < contentLines[y].Length; x++)
-            {
+            for (int x = 0; x < columnas; x++)
+            {               
                 if (contentLines[y][x] == '1')
                 {
-                    board[x, y] = true;
+                    board.Celdas[y, x] = true;
                 }
             }
-            return board;
         }
+
+        return board;
     }
 }
