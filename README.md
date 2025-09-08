@@ -150,7 +150,7 @@ las filas son de igual largo.
 
 Por ejemplo, el siguiente archivo de texto:
 
-```none
+s```none
 100
 011
 110
