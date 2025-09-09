@@ -19,11 +19,11 @@ public class Lector
             {               
                 if (contentLines[y][x] == '1')
                 {
-                    board.Celdas[y, x] = true;
+                    board.Tablero[y, x] = true;
                 }
             }
         }
 
-        return Tablero;
+        return board;
     }
 }
