@@ -8,8 +8,8 @@ public class Impresor
 {
     public void Print(Tablero tablero)
     {
-        int width; //variabe que representa el ancho del tablero
-        int height; //variabe que representa altura del tablero
+        int width = tablero.Width; //variabe que representa el ancho del tablero
+        int height = tablero.Height; //variabe que representa altura del tablero
         while (true)
         {
             Console.Clear();
@@ -30,7 +30,7 @@ public class Impresor
                 s.Append("\n");
             }
             Console.WriteLine(s.ToString());
-            NextGen.Calculo(tablero);
+            NextGen.ActualizaTablero(tablero);
             Thread.Sleep(300);
         }
     }
