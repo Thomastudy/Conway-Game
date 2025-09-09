@@ -24,6 +24,6 @@ public class Lector
             }
         }
 
-        return board;
+        return Tablero;
     }
 }
