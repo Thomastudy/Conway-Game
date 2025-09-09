@@ -18,7 +18,7 @@ public class Impresor
             {
                 for (int x = 0; x < width; x++)
                 {
-                    if (tablero[x, y])
+                    if (tablero.State(x,y))
                     {
                         s.Append("|X|");
                     }

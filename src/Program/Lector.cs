@@ -19,7 +19,7 @@ public class Lector
             {               
                 if (contentLines[y][x] == '1')
                 {
-                    board.Celdas[y, x] = true;
+                    board.IsAlive(y, x,true);
                 }
             }
         }
